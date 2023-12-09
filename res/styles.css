@@ -20,6 +20,42 @@ main{
 p{
     color: hsl(229, 6%, 66%);
 }
+section{
+    position: relative;
+    top: 100px;
+    width: 500px;
+    display: grid;
+    transform: rotate(45deg);
+    grid-template-columns: auto auto;
+}
+div{
+    width: 350px;
+    height: 250px;
+    transform: rotate(-45deg);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-top: solid 4px #000;
+    border-radius: 3px;
+    position: relative;
+}
+
+/* Classes */
+.box1{
+    border-color: hsl(0, 78%, 62%);
+    top: -30px;
+    left: -10px;
+}
+.box2{
+    border-color:hsl(212, 86%, 64%) ;
+}
+.box3{
+    border-color: hsl(180, 62%, 55%);
+    top: 90px;
+}
+.box4{
+    border-color: hsl(34, 97%, 64%);
+    top: 120px;
+    left: 30px;
+}
 
 /* ID's */
 #h11{
@@ -32,7 +68,13 @@ p{
 }
 
 /* Queries */
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 376px) {
+    /* tags */
+    section{
+        display: block;
+        transform: rotate(0deg);
+    }
+
     /* id's */
     #h11{
         transform: scale(0.8);
