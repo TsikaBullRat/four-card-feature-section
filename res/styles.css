@@ -2,7 +2,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,13 +29,29 @@ section{
     grid-template-columns: auto auto;
 }
 div{
-    width: 350px;
+    width: 300px;
     height: 250px;
     transform: rotate(-45deg);
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     border-top: solid 4px #000;
     border-radius: 3px;
     position: relative;
+    text-align: left;
+    padding: 10px 30px;
+}
+div>h2{
+    font-size: 23px;
+    margin: 0;
+    margin-top: 10px;
+}
+div>img{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+footer{
+    position: absolute;
+    bottom: -500px;
 }
 
 /* Classes */
@@ -71,10 +87,27 @@ div{
 @media screen and (max-width: 376px) {
     /* tags */
     section{
-        display: block;
+        width: 100vw;
+        height: 1300px;
+        display: flex;
+        transform: rotate(0deg);
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    div{
         transform: rotate(0deg);
     }
-
+    footer{
+        bottom: -1300px;
+    }
+    /* classes */
+    .box1, .box2, .box3, .box4{
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
     /* id's */
     #h11{
         transform: scale(0.8);
